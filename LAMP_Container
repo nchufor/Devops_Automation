@@ -1,0 +1,40 @@
+Docker-LAMP is a set of docker images that include the phusion baseimage (14.04, 16.04 and 18.04 varieties), along with a LAMP stack (Apache, MySQL and PHP) all in one handy package.
+
+With Ubuntu 18.04 amd 16.04 images on the latest-1804 and latest-1604 tags, Docker-LAMP is flexible enough to use with all of your LAMP projects.
+
+Build Status Docker Hub License
+
+Contents
+Introduction
+Image Versions
+Using the image
+On the command line
+With a Dockerfile
+MySQL Databases
+Creating a database
+PHPMyAdmin
+Command Line
+
+# Image Versions
+
+
+Component	latest-1404	latest-1604	latest-1804
+
+Apache	2.4.7	2.4.18	2.4.29
+MySQL	5.5.62	5.7.26	5.7.26
+PHP	7.3.3	7.3.6	7.3.6
+phpMyAdmin	4.8.5	4.9.0.1	4.9.0.1
+
+
+Using the image
+On the command line
+This is the quickest way
+
+# Launch a 18.04 based image
+docker run -p "80:80" -v ${PWD}/app:/app mattrayner/lamp:latest-1804
+
+# Launch a 16.04 based image
+docker run -p "80:80" -v ${PWD}/app:/app mattrayner/lamp:latest-1604
+
+# Launch a 14.04 based image
+docker run -p "80:80" -v ${PWD}/app:/app mattrayner/lamp:latest-1404
