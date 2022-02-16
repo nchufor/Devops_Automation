@@ -51,9 +51,6 @@ docker run \
   -v jenkins-data:/var/jenkins_home \
   -v /var/run/docker.sock:/var/run/docker.sock \
   jenkinsci/blueocean
-docker exec -it myjenkin bash
-cat /var/jenkins_home/secrets/initialAdminPassword
-exit
 docker logs myjenkin
 wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat/jenkins.repo
 rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
