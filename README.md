@@ -8,7 +8,7 @@ yum -y install wget git
 
 https://github.com/joshking1/Devops_Automation.git
 
-cd name of the script file you want to use
+cd name of the folder containing the script you want to use
 
 chmod 755 *.sh
 
@@ -20,7 +20,7 @@ apt-get -y install wget git
 
 https://github.com/joshking1/Devops_Automation.git
 
-cd name of the script file you want to use
+cd name of the folder containiing the script you want to use
 
 chmod 755 *.sh
 
