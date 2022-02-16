@@ -1,0 +1,64 @@
+Install linux server 
+
+# Install Apache 
+
+sudo apt-get update 
+sudo apt install apache2 -y 
+sudo systemctl restart apache2.service
+sudo systemctl status apache2.service
+
+# Install PHP 
+
+sudo apt install php -y 
+sudo /etc/init.d/apache2 restart 
+sudo systemctl status apache2.service
+sudo vi /var/www/html/test.php 
+<?php echo ' Test Works' ; ?>
+
+save 
+
+#Save and go back to the webbrowser and input 
+
+#ipadress/test.php 
+
+# Install MYSQL 
+
+sudo apt install mysql-server -y 
+
+sudo mysql -u root -p 
+
+password: ubuntu 
+
+mysql> show databases 
+     > ;
+
+# Install phymyadmin 
+
+sudo apt install phpmyadmin -y 
+
+input your MYSQL password: ubuntu 
+Confirm mysql password: ubuntu 
+
+go to 
+
+http://34.130.122.215/phpmyadmin
+
+Check php.ini file 
+
+php -i | grep "Loaded Configuration File"
+
+sudo vi path give 
+
+# Solution to apache_Admin issue 
+
+
+sudo vi /etc/apache2/apache2.conf 
+
+Add this line 
+
+Include /etc/phpmyadmin/apache.conf
+
+Go to the browser and type 
+
+ipaddress/phpmyadmin 
+
